@@ -7,7 +7,7 @@ function getPosts(){
   setTimeout(()=>{
     let str = "";
     for(let i=0;i<posts.length;i++){
-      str = str +`<li>${posts[i].title}</li>`
+      str = str +`<li>${posts[i].title} - last updated ${(new Date().getTime() - posts[i].createdAt)/1000} seconds</li>`
     }
     document.body.innerHTML = str;
   },1000);
